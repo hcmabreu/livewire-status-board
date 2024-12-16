@@ -3,6 +3,12 @@
 <li class="{{ $styles['recordContent'] }}">
     <div class="flex items-center gap-x-2 border-b border-gray-900/5 bg-gray-50 p-2">
       <div class="text-sm/6 font-medium text-gray-900">{{ $record['title'] }}</div>
+
+      @if(isset($record['tags']) && is_array($record['tags']))
+        @foreach($record['tags'] as $tag)
+            <flux:badge size="sm">{{ $tag['value'] ?? '-' }}</flux:badge>
+        @endforeach
+      @endif
     </div>
 
     @if(isset($record['content']) && is_array($record['content']) && count($record['content']) > 0)
@@ -10,7 +16,7 @@
           @foreach($record['content'] as $item)
               <div class="flex justify-between gap-x-4 py-2">
                 <dt class="text-gray-500text-sm">{{ $item['title'] ?? '-' }}</dt>
-                <dd class="text-gray-700">{{ $item['value'] }}</dd>
+                <dd class="text-gray-700">{{ $item['value'] ?? '-' }}</dd>
               </div>
           @endforeach
         </dl>
