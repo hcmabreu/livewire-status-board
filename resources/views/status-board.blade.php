@@ -3,12 +3,14 @@
         @includeIf($beforeStatusBoardView)
     </div>
 
-    <div class="{{ $styles['wrapper'] }}">
-        @foreach($statuses as $status)
-            @include($statusView, [
-                'status' => $status
-            ])
-        @endforeach
+    <div class="overflow-y-auto">
+        <div class="{{ $styles['wrapper'] }}" style="min-width: 960px;">
+            @foreach($statuses as $status)
+                @include($statusView, [
+                    'status' => $status
+                ])
+            @endforeach
+        </div>
     </div>
 
     <div>

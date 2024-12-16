@@ -1,6 +1,6 @@
 
 {{-- Injected variables $record, $styles --}}
-<div
+<ul
     id="{{ $record['id'] }}"
     @if($recordClickEnabled)
         wire:click="onRecordClick('{{ $record['id'] }}')"
@@ -12,4 +12,4 @@
         'styles' => $styles,
     ])
 
-</div>
+</ul>

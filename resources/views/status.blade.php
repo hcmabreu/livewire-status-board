@@ -1,6 +1,6 @@
 
 {{-- Injected variables $status, $styles --}}
-<div class="{{ $styles['statusWrapper'] }}">
+<div class="{{ $styles['statusWrapper'] }}" style="min-width: 30%;">
     <div class="{{ $styles['status'] }}" id="{{ $status['id'] }}">
 
         @include($statusHeaderView, [

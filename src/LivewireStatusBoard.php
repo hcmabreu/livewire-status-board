@@ -115,14 +115,14 @@ class LivewireStatusBoard extends Component
     public function styles()
     {
         return [
-            'wrapper' => 'w-full h-full flex space-x-4 overflow-x-auto',
+            'wrapper' => 'w-full h-full flex space-x-2 overflow-x',
             'statusWrapper' => 'h-full flex-1',
-            'status' => 'bg-blue-200 rounded px-2 flex flex-col h-full',
+            'status' => 'px-2 flex flex-col h-full',
             'statusHeader' => 'p-2 text-sm text-gray-700',
             'statusFooter' => '',
-            'statusRecords' => 'space-y-2 p-2 flex-1 overflow-y-auto',
-            'record' => 'shadow bg-white p-2 rounded border',
-            'recordContent' => 'w-full',
+            'statusRecords' => 'space-y-2 flex-1 overflow-y-auto',
+            'record' => 'p-2 cursor-pointer',
+            'recordContent' => 'overflow-hidden rounded-xl border border-gray-200',
         ];
     }
 
