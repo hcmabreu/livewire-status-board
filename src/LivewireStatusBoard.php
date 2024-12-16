@@ -24,6 +24,7 @@ use Livewire\Component;
  */
 class LivewireStatusBoard extends Component
 {
+    public $id;
     public $sortable;
     public $sortableBetweenStatuses;
 
@@ -41,8 +42,8 @@ class LivewireStatusBoard extends Component
 
     public $recordClickEnabled;
 
-    public function mount($sortable = false,
-                          $sortableBetweenStatuses = false,
+    public function mount($sortable = true,
+                          $sortableBetweenStatuses = true,
                           $statusBoardView = null,
                           $statusView = null,
                           $statusHeaderView = null,
